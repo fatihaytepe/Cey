@@ -243,7 +243,7 @@ textarea {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 2.5rem;
-  align-items: end;
+  align-items: center;
 }
 
 .hero-copy {
@@ -291,22 +291,59 @@ textarea {
   gap: 0.8rem;
 }
 
-.hero-visual {
+.hero-visual,
+.about-visual {
   margin: 0;
   position: relative;
   z-index: 1;
+  isolation: isolate;
+}
+
+.hero-visual {
+  justify-self: end;
+  width: min(100%, 400px);
   animation: rise 0.95s var(--ease) 0.12s both;
+}
+
+/* Yumuşak kenar geçişi — sert crop hissini kırar */
+.hero-visual::after,
+.about-visual::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, var(--fade-bg) 0%, transparent 18%, transparent 82%, var(--fade-bg) 100%),
+    linear-gradient(180deg, var(--fade-bg) 0%, transparent 14%, transparent 72%, var(--fade-bg) 100%);
+}
+
+.hero-visual {
+  --fade-bg: #ffffff;
+}
+
+.about-visual {
+  --fade-bg: #ffffff;
 }
 
 .hero-photo,
 .about-photo {
+  display: block;
   width: 100%;
-  max-height: min(72vh, 640px);
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 1.5rem 1.5rem 0.5rem 1.5rem;
-  box-shadow: var(--shadow);
-  background: var(--mist);
+  height: auto;
+  max-height: min(74vh, 660px);
+  object-fit: contain;
+  object-position: center bottom;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  -webkit-mask-image: radial-gradient(ellipse 92% 88% at 50% 42%, #000 42%, rgba(0, 0, 0, 0.65) 68%, transparent 100%);
+  mask-image: radial-gradient(ellipse 92% 88% at 50% 42%, #000 42%, rgba(0, 0, 0, 0.65) 68%, transparent 100%);
+}
+
+.about-photo {
+  object-position: center center;
+  max-height: min(72vh, 620px);
 }
 
 .btn {
@@ -929,7 +966,8 @@ textarea {
 
   .hero-visual {
     order: -1;
-    width: min(340px, 100%);
+    width: min(300px, 90%);
+    justify-self: center;
     margin-inline: auto;
   }
 
@@ -951,7 +989,7 @@ textarea {
   }
 
   .about-visual {
-    width: min(360px, 100%);
+    width: min(320px, 90%);
     margin-inline: auto;
   }
 }
