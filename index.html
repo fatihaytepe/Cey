@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe atla</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header" id="ust">
     <div class="header-inner">
@@ -19,33 +20,64 @@
         <span></span><span></span>
       </button>
       <nav class="site-nav" id="ana-menu" aria-label="Ana menü">
-        <a href="#hakkimda">Hakkımda</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#surec">Süreç</a>
-        <a href="#bilgi">Bilgilendirme</a>
-        <a href="#iletisim" class="nav-cta">Randevu al</a>
+        <a href="#hakkimda" data-nav>Hakkımda</a>
+        <a href="#hizmetler" data-nav>Hizmetler</a>
+        <a href="#surec" data-nav>Süreç</a>
+        <a href="#bilgi" data-nav>Bilgilendirme</a>
+        <a href="#sss" data-nav>SSS</a>
+        <a href="#iletisim" class="nav-cta" data-nav>Randevu al</a>
       </nav>
     </div>
   </header>
 
   <main id="icerik">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="swoosh swoosh-tr" aria-hidden="true"></div>
-      <div class="swoosh swoosh-bl" aria-hidden="true"></div>
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+        <span class="orb orb-c"></span>
+        <span class="grain"></span>
+      </div>
       <div class="hero-layout">
         <div class="hero-copy">
+          <p class="hero-brand">Ceylan Tarhan</p>
           <h1 id="hero-title">Kariyerini Bilinçli İnşa Et.</h1>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p class="hero-sub">Deneyime dayalı kariyer danışmanlığı</p>
-          <p class="hero-welcome">hoş geldin!</p>
+          <p class="hero-sub">
+            Deneyime dayalı kariyer danışmanlığı. Seni rastgele başvuru döngüsünden çıkarıp;
+            doğru konumlanmış, görünür ve net adımlarla ilerleyen bir profile dönüştürüyoruz.
+          </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#iletisim">Profilini değerlendirelim</a>
-            <a class="btn btn-outline" href="#hizmetler">Neler bulacaksın?</a>
+            <a class="btn btn-primary magnetic" href="#iletisim"><span>Ücretsiz ön değerlendirme</span></a>
+            <a class="btn btn-outline magnetic" href="#hizmetler"><span>7 hizmeti incele</span></a>
           </div>
         </div>
-        <figure class="hero-visual">
-          <img src="assets/ceylan-hero.jpg" alt="Ceylan Tarhan" class="hero-photo" width="606" height="1228" />
+        <figure class="hero-visual" data-tilt>
+          <div class="hero-frame">
+            <img src="assets/ceylan-hero.jpg" alt="Ceylan Tarhan" class="hero-photo" width="285" height="614" />
+          </div>
         </figure>
+      </div>
+      <a class="scroll-cue" href="#guven" aria-label="Aşağı kaydır"><span></span></a>
+    </section>
+
+    <section class="trust-bar" id="guven" aria-label="Öne çıkanlar">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>5+ yıl</strong>
+          <span>Malta’da marka &amp; iletişim deneyimi</span>
+        </div>
+        <div class="trust-item">
+          <strong>Online</strong>
+          <span>Türkiye ve yurt dışı danışanlarla uyumlu</span>
+        </div>
+        <div class="trust-item">
+          <strong>7 hizmet</strong>
+          <span>Planlamadan mülakata uçtan uca destek</span>
+        </div>
+        <div class="trust-item">
+          <strong>Kişisel</strong>
+          <span>Şablon değil; hedefine özel strateji</span>
+        </div>
       </div>
     </section>
 
@@ -56,19 +88,41 @@
           <h2 id="fit-title">Kariyerinde ilerlemek istiyorsun ama nereden başlayacağını bilmiyor musun?</h2>
           <p class="section-lead">
             Kariyer süreci yalnızca başvuru yapmakla değil; doğru konumlanma, görünürlük ve
-            stratejik bir yaklaşımla ilerler. Eğer bunlardan biri seni tanımlıyorsa, birlikte çalışalım.
+            stratejik bir yaklaşımla ilerler. Aşağıdakilerden biri seni tanımlıyorsa, birlikte net bir yol çıkarabiliriz.
           </p>
         </div>
         <div class="two-col">
-          <ul class="star-list">
-            <li>CV’m yeterince güçlü mü, diye düşünüyorsan</li>
-            <li>LinkedIn profilin seni doğru yansıtmıyorsa</li>
-            <li>Başvuru yapıyorsun ama geri dönüş alamıyorsan</li>
-            <li>Bir sonraki kariyer adımının ne olması gerektiğini bilmiyorsan</li>
-            <li>Yurt dışında çalışmayı hedefliyor ama hazır değilsen</li>
-            <li>Networking ve görünürlük konusunda geride kaldığını hissediyorsan</li>
-          </ul>
+          <div>
+            <p class="panel-label">Sık karşılaşılan tıkanmalar</p>
+            <ul class="star-list">
+              <li>
+                <strong>CV belirsizliği</strong>
+                <span>CV’m yeterince güçlü mü, diye düşünüyorsan</span>
+              </li>
+              <li>
+                <strong>Zayıf LinkedIn yansıması</strong>
+                <span>Profilin seni doğru yansıtmıyorsa</span>
+              </li>
+              <li>
+                <strong>Dönüşsüz başvurular</strong>
+                <span>Başvuru yapıyorsun ama geri dönüş alamıyorsan</span>
+              </li>
+              <li>
+                <strong>Net olmayan sonraki adım</strong>
+                <span>Bir sonraki kariyer adımının ne olması gerektiğini bilmiyorsan</span>
+              </li>
+              <li>
+                <strong>Yurt dışı hazırlığı</strong>
+                <span>Yurt dışında çalışmayı hedefliyor ama hazır değilsen</span>
+              </li>
+              <li>
+                <strong>Görünürlük boşluğu</strong>
+                <span>Networking ve görünürlük konusunda geride kaldığını hissediyorsan</span>
+              </li>
+            </ul>
+          </div>
           <div class="info-card">
+            <p class="info-card-kicker">Keşke daha önce bilseydim</p>
             <p class="info-card-title">Keşke biri bana bunları daha önce anlatsaydı…</p>
             <ul class="plain-list">
               <li>Kariyerini nasıl planlayacağını</li>
@@ -80,7 +134,7 @@
               <li>Gönüllülük ve yan deneyimlerin değerini</li>
             </ul>
             <p class="fit-closing compact">
-              Bu soruların cevaplarını yıllar içinde deneyimleyerek öğrendim.
+              Bu soruların cevaplarını yıllar içinde deneyimleyerek öğrendim. Şimdi aynı yolu daha hızlı ve bilinçli geçmen için yanındayım.
             </p>
           </div>
         </div>
@@ -97,111 +151,239 @@
             bir aday olmaktan çıkarıp, bilinçli ilerleyen bir profile dönüştürmek.
           </p>
         </div>
+
+        <div class="service-filter" role="tablist" aria-label="Hizmet filtreleri">
+          <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Tümü</button>
+          <button type="button" class="filter-btn" data-filter="profil" role="tab" aria-selected="false">Profil</button>
+          <button type="button" class="filter-btn" data-filter="performans" role="tab" aria-selected="false">Performans</button>
+          <button type="button" class="filter-btn" data-filter="uluslararasi" role="tab" aria-selected="false">Uluslararası</button>
+          <button type="button" class="filter-btn" data-filter="buyume" role="tab" aria-selected="false">Büyüme</button>
+        </div>
+
         <div class="service-grid detailed">
-          <article class="service detailed" id="hizmet-kariyer">
-            <p class="service-index">01</p>
+          <article class="service detailed" id="hizmet-kariyer" data-tags="profil buyume">
+            <div class="service-top">
+              <p class="service-index">01</p>
+              <p class="service-meta">Başlangıç · Yol haritası</p>
+            </div>
             <h3>Kariyer Planlama</h3>
             <p>
               Hangi sektör, hangi rol, hangi ülke? Hedeflerini, güçlü yönlerini ve gerçekçi
               seçeneklerini birlikte netleştiriyoruz. Kısa ve orta vadeli bir kariyer yol haritası çıkarıyoruz.
             </p>
-            <ul class="include-list">
-              <li>Hedef ve yetkinlik analizi</li>
-              <li>Pozisyon / sektör eşleştirme</li>
-              <li>3–6–12 aylık aksiyon planı</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Yönünü netleştirmeye çalışan, geçiş düşünen veya bir sonraki adımı belirsiz olanlar.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>Hedef ve yetkinlik analizi</li>
+                  <li>Pozisyon / sektör eşleştirme</li>
+                  <li>3–6–12 aylık aksiyon planı</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Kariyer Planlama">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed" id="hizmet-cv">
-            <p class="service-index">02</p>
+          <article class="service detailed" id="hizmet-cv" data-tags="profil">
+            <div class="service-top">
+              <p class="service-index">02</p>
+              <p class="service-meta">Profil · ATS &amp; recruiter</p>
+            </div>
             <h3>CV &amp; LinkedIn Stratejileri</h3>
             <p>
               CV’ni hedef ülke, sektör ve pozisyona göre yeniden konumlandırıyoruz.
               LinkedIn profilini algoritma, anahtar kelime ve recruiter bakış açısına göre optimize ediyoruz.
             </p>
-            <ul class="include-list">
-              <li>ATS uyumlu CV kurgusu</li>
-              <li>Başlık, about ve deneyim metinleri</li>
-              <li>Anahtar kelime &amp; görünürlük düzeni</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Başvuru yapan ama dönüş alamayan; profilini hedef role göre yeniden yazmak isteyenler.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>ATS uyumlu CV kurgusu</li>
+                  <li>Başlık, about ve deneyim metinleri</li>
+                  <li>Anahtar kelime &amp; görünürlük düzeni</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="CV &amp; LinkedIn Stratejileri">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed" id="hizmet-mulakat">
-            <p class="service-index">03</p>
+          <article class="service detailed" id="hizmet-mulakat" data-tags="performans">
+            <div class="service-top">
+              <p class="service-index">03</p>
+              <p class="service-meta">Performans · Simülasyon</p>
+            </div>
             <h3>Mülakat Hazırlığı</h3>
             <p>
               Mülakat performansını güçlendirmek için kişisel stratejini birlikte kuruyoruz.
               Pozisyona özel sorularla prova yapıyor; cevaplarını, iletişim tarzını ve duruşunu geliştiriyoruz.
             </p>
-            <ul class="include-list">
-              <li>Kişisel mülakat stratejisi</li>
-              <li>STAR / yetkinlik cevapları</li>
-              <li>Simülasyon ve geri bildirim</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Görüşmeye çağrılan ama kendini yeterince ifade edemediğini düşünen adaylar.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>Kişisel mülakat stratejisi</li>
+                  <li>STAR / yetkinlik cevapları</li>
+                  <li>Simülasyon ve geri bildirim</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Mülakat Hazırlığı">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed" id="hizmet-yurtdisi">
-            <p class="service-index">04</p>
+          <article class="service detailed" id="hizmet-yurtdisi" data-tags="uluslararasi profil">
+            <div class="service-top">
+              <p class="service-index">04</p>
+              <p class="service-meta">Uluslararası · Lokal konumlanma</p>
+            </div>
             <h3>Yurt Dışı Kariyer Fırsatları</h3>
             <p>
               Yeni bir ülkede kariyer kurmak sadece başvuru yapmak değildir.
               Hedef pazara göre konumlanma, başvuru stratejisi ve kültürel farkları birlikte ele alıyoruz.
             </p>
-            <ul class="include-list">
-              <li>Ülke / pazar odaklı konumlanma</li>
-              <li>Başvuru ve süreç yönetimi</li>
-              <li>Yerel beklentilere göre profil düzeni</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Özellikle Avrupa / Malta ekseninde yurt dışı kariyer hedefleyenler.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>Ülke / pazar odaklı konumlanma</li>
+                  <li>Başvuru ve süreç yönetimi</li>
+                  <li>Yerel beklentilere göre profil düzeni</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Yurt Dışı Kariyer Fırsatları">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed" id="hizmet-network">
-            <p class="service-index">05</p>
+          <article class="service detailed" id="hizmet-network" data-tags="performans uluslararasi">
+            <div class="service-top">
+              <p class="service-index">05</p>
+              <p class="service-meta">Görünürlük · İlişki ağı</p>
+            </div>
             <h3>Networking ve Profesyonel Görünürlük</h3>
             <p>
               Doğru insanlara ulaşmak, doğru mesajla görünmek. Networking yaklaşımını,
               mesaj şablonlarını ve LinkedIn görünürlük taktiklerini senin hedefine göre kurguluyoruz.
             </p>
-            <ul class="include-list">
-              <li>Görünürlük analizi</li>
-              <li>Networking mesaj şablonları</li>
-              <li>Hedef kişi / rol listesi yaklaşımı</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Yalnızca ilan peşinde koşmak istemeyen; ilişki ağıyla fırsat üretenler.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>Görünürlük analizi</li>
+                  <li>Networking mesaj şablonları</li>
+                  <li>Hedef kişi / rol listesi yaklaşımı</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Networking ve Profesyonel Görünürlük">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed" id="hizmet-marka">
-            <p class="service-index">06</p>
+          <article class="service detailed" id="hizmet-marka" data-tags="profil buyume">
+            <div class="service-top">
+              <p class="service-index">06</p>
+              <p class="service-meta">Konumlanma · Hikâye</p>
+            </div>
             <h3>Kişisel Marka Yönetimi</h3>
             <p>
               Seni “kimsin / ne sunuyorsun / neden seni seçmeliler” çerçevesinde netleştiriyoruz.
               Profesyonel hikâyeni tutarlı hale getirip CV, LinkedIn ve mülakatlarda aynı dili konuşmanı sağlıyoruz.
             </p>
-            <ul class="include-list">
-              <li>Kişisel konumlanma ifadesi</li>
-              <li>Hikâye ve değer önerisi</li>
-              <li>Kanal bazlı tutarlı mesajlaşma</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Deneyimi olan ama kendini net anlatamayan; kişisel markasını toparlamak isteyenler.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list">
+                  <li>Kişisel konumlanma ifadesi</li>
+                  <li>Hikâye ve değer önerisi</li>
+                  <li>Kanal bazlı tutarlı mesajlaşma</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Kişisel Marka Yönetimi">Bu hizmet için yaz →</a>
           </article>
 
-          <article class="service detailed service-wide" id="hizmet-gelisim">
-            <p class="service-index">07</p>
+          <article class="service detailed service-wide" id="hizmet-gelisim" data-tags="buyume">
+            <div class="service-top">
+              <p class="service-index">07</p>
+              <p class="service-meta">Uzun vadeli · Mentorluk</p>
+            </div>
             <h3>Kariyer Gelişimi</h3>
             <p>
               Rol değişimi, yükselme veya yeni bir alana geçiş sürecinde yanında oluyoruz.
               Eksiklerini, fırsat alanlarını ve gelişim adımlarını birlikte netleştirip sürdürülebilir bir ilerleme planı kuruyoruz.
             </p>
-            <ul class="include-list inline">
-              <li>Yetkinlik boşluğu analizi</li>
-              <li>Gelişim öncelikleri</li>
-              <li>Mentorluk odaklı takip</li>
-              <li>Gönüllülük / yan deneyim stratejisi</li>
-            </ul>
-            <a class="service-link" href="#iletisim">Bu hizmet için yaz →</a>
+            <div class="service-blocks wide">
+              <div>
+                <p class="mini-label">Kimler için?</p>
+                <p class="mini-text">Mevcut rolünde büyümek, alan değiştirmek veya uzun vadeli gelişim takibi isteyenler.</p>
+              </div>
+              <div>
+                <p class="mini-label">Çıktılar</p>
+                <ul class="include-list inline">
+                  <li>Yetkinlik boşluğu analizi</li>
+                  <li>Gelişim öncelikleri</li>
+                  <li>Mentorluk odaklı takip</li>
+                  <li>Gönüllülük / yan deneyim stratejisi</li>
+                </ul>
+              </div>
+            </div>
+            <a class="service-link" href="#iletisim" data-service="Kariyer Gelişimi">Bu hizmet için yaz →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="yaklasim" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Çalışma yaklaşımı</p>
+          <h2 id="approach-title">Şablon değil; ölçülebilir ve kişiselleştirilmiş ilerleme</h2>
+          <p class="section-lead">
+            Her danışan aynı yoldan geçmez. Ama her süreçte aynı standartlar geçerlidir:
+            net hedef, uygulanabilir aksiyon ve düzenli geri bildirim.
+          </p>
+        </div>
+        <div class="approach-grid">
+          <article class="approach-card">
+            <p class="approach-num">01</p>
+            <h3>Dinle &amp; teşhis et</h3>
+            <p>Mevcut durumunu, hedefini ve engellerini derinlemesine dinleriz. Sorun “daha çok başvuru” olmayabilir; çoğu zaman konumlanma veya anlatım eksiktir.</p>
+          </article>
+          <article class="approach-card">
+            <p class="approach-num">02</p>
+            <h3>Konumlandır</h3>
+            <p>Seni rol, sektör ve pazara göre yeniden konumlarız. CV, LinkedIn ve kişisel hikâyen aynı dili konuşmaya başlar.</p>
+          </article>
+          <article class="approach-card">
+            <p class="approach-num">03</p>
+            <h3>Uygula &amp; prova et</h3>
+            <p>Başvuru, networking ve mülakat adımlarını pratikte çalışırız. Teori değil; uygulanabilir çıktılar üretiriz.</p>
+          </article>
+          <article class="approach-card">
+            <p class="approach-num">04</p>
+            <h3>Ölç &amp; güncelle</h3>
+            <p>Dönüşleri birlikte okur, stratejiyi güncelleriz. Ne işe yarıyor / yaramıyor netleşir; bir sonraki adım net kalır.</p>
           </article>
         </div>
       </div>
@@ -213,37 +395,48 @@
           <p class="eyebrow">Nasıl ilerliyoruz?</p>
           <h2 id="process-title">Net, sade ve takip edilebilir bir süreç</h2>
           <p class="section-lead light">
-            Rastgele başvuru döngüsünden çıkıp, ölçülebilir adımlarla ilerliyoruz.
+            Rastgele başvuru döngüsünden çıkıp, ölçülebilir adımlarla ilerliyoruz. Her aşamanın net bir çıktısı vardır.
           </p>
         </div>
         <ol class="process-list">
           <li>
+            <span class="process-num" aria-hidden="true">01</span>
             <h3>Tanışma &amp; ihtiyaç analizi</h3>
             <p>Hedeflerini, geçmişini ve tıkanma noktalarını dinliyoruz. Hangi hizmetin sana uygun olduğunu netleştiriyoruz.</p>
+            <p class="process-out">Çıktı: öncelik listesi + önerilen hizmet yolu</p>
           </li>
           <li>
+            <span class="process-num" aria-hidden="true">02</span>
             <h3>Profil konumlandırma</h3>
             <p>CV, LinkedIn ve kişisel marka dilini hedef role göre yeniden kurguluyoruz.</p>
+            <p class="process-out">Çıktı: güncel profil seti + konumlanma ifadesi</p>
           </li>
           <li>
+            <span class="process-num" aria-hidden="true">03</span>
             <h3>Strateji &amp; uygulama</h3>
             <p>Başvuru, networking ve mülakat için uygulanabilir bir yol haritası çıkarıp birlikte ilerliyoruz.</p>
+            <p class="process-out">Çıktı: haftalık aksiyon planı + mesaj şablonları</p>
           </li>
           <li>
+            <span class="process-num" aria-hidden="true">04</span>
             <h3>Geri bildirim &amp; güncelleme</h3>
             <p>Dönüşleri birlikte okuyor, stratejiyi güncelliyor ve bir sonraki adımı netleştiriyoruz.</p>
+            <p class="process-out">Çıktı: güncellenmiş strateji + devam planı</p>
           </li>
         </ol>
       </div>
     </section>
 
     <section class="section about" id="hakkimda" aria-labelledby="about-title">
-      <div class="swoosh swoosh-tr soft" aria-hidden="true"></div>
+      <div class="about-atmosphere" aria-hidden="true"></div>
       <div class="container about-grid">
-        <figure class="about-visual">
-          <img src="assets/ceylan-about.jpg" alt="Ceylan Tarhan portre" class="about-photo" width="300" height="697" />
+        <figure class="about-visual" data-tilt>
+          <div class="about-frame">
+            <img src="assets/ceylan-about.jpg" alt="Ceylan Tarhan portre" class="about-photo" width="300" height="697" />
+          </div>
         </figure>
         <div class="about-copy">
+          <p class="eyebrow">Hakkımda</p>
           <p class="script-accent">Ben</p>
           <h2 id="about-title">Ceylan Tarhan</h2>
           <p class="about-intro">
@@ -253,8 +446,25 @@
           </p>
           <p>
             Amacım seni yalnızca başvuru yapan bir aday olmaktan çıkarıp, doğru anlatılmış,
-            görünür ve bilinçli konumlanmış bir profile dönüştürmek.
+            görünür ve bilinçli konumlanmış bir profile dönüştürmek. Teori değil; sahada
+            gördüğüm işe alım gerçekleriyle ilerliyoruz.
           </p>
+
+          <div class="timeline" aria-label="Deneyim özeti">
+            <div class="timeline-item">
+              <strong>İnsan Kaynakları temeli</strong>
+              <span>Sakarya Üniversitesi — İKY eğitimi ve kariyer süreçlerine bakış</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Malta · 5+ yıl</strong>
+              <span>Marka &amp; iletişim alanında uluslararası çalışma deneyimi</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Danışmanlık &amp; mentorluk</strong>
+              <span>Bireysel kariyer yolculuklarında konumlanma ve görünürlük desteği</span>
+            </div>
+          </div>
+
           <div class="exp-chips" aria-label="Deneyim alanları">
             <span>Yurt Dışı Deneyimi</span>
             <span>Profesyonel Ağlar</span>
@@ -264,7 +474,7 @@
             <span>Marka &amp; İletişim</span>
           </div>
           <p class="tagline">Deneyime Dayalı Kariyer Danışmanlığı</p>
-          <a class="text-link" href="#iletisim">Birlikte çalışalım →</a>
+          <a class="btn btn-primary magnetic" href="#iletisim"><span>Birlikte çalışalım</span></a>
         </div>
       </div>
     </section>
@@ -276,60 +486,74 @@
           <h2 id="info-title">Kariyer sürecinde bilmen gerekenler</h2>
           <p class="section-lead">
             Genel geçer tavsiyeler değil; uygulamada fark yaratan temel noktalar.
+            Bunlar, danışmanlık süreçlerinde en çok dönüm noktası yaratan başlıklar.
           </p>
         </div>
         <div class="info-grid">
           <article class="tip">
+            <p class="tip-index">01</p>
             <h3>CV bir özet değil, bir konumlanma aracıdır</h3>
             <p>
               İyi bir CV her şeyi yazmak değildir. Hedef rolün diline göre deneyimini
               ölçülebilir sonuçlarla anlatmak ve ATS’nin okuyabileceği bir yapı kurmaktır.
             </p>
+            <p class="tip-note">Pratik: her madde “ne yaptım + nasıl + etki” taşısın.</p>
           </article>
           <article class="tip">
+            <p class="tip-index">02</p>
             <h3>LinkedIn görünürlük olmadan çalışmaz</h3>
             <p>
               Profilini doldurmak yetmez. Başlık, anahtar kelime, içerik ve etkileşim birlikte
               çalıştığında recruiter’ların seni bulma ihtimali artar.
             </p>
+            <p class="tip-note">Pratik: başlık = rol + uzmanlık + değer, sadece unvan değil.</p>
           </article>
           <article class="tip">
+            <p class="tip-index">03</p>
             <h3>Networking tesadüf değil, sistemdir</h3>
             <p>
               Doğru kişiye, doğru zamanda, doğru mesajla ulaşmak; onlarca kör başvurudan
               daha hızlı sonuç verebilir. Mesajın kişisel ve net olmalı.
             </p>
+            <p class="tip-note">Pratik: haftalık 5–8 nitelikli temas hedefi koy.</p>
           </article>
           <article class="tip">
+            <p class="tip-index">04</p>
             <h3>Mülakat prova ister</h3>
             <p>
               Deneyimin güçlü olsa bile kendini ifade edemezsen süreç ilerlemeyebilir.
               Cevap yapısı, örnekler ve iletişim tarzı bilinçli çalışıldığında güçlenir.
             </p>
+            <p class="tip-note">Pratik: STAR ile 6–8 temel hikâyeni hazırla.</p>
           </article>
           <article class="tip">
+            <p class="tip-index">05</p>
             <h3>Yurt dışı kariyer ayrı bir oyun alanıdır</h3>
             <p>
               Farklı ülkelerde beklentiler, CV formatları ve işe alım kültürleri değişir.
               Aynı profil her pazarda aynı şekilde çalışmaz; konumlanma lokal olmalıdır.
             </p>
+            <p class="tip-note">Pratik: hedef ülkeye göre CV + LinkedIn dilini ayır.</p>
           </article>
           <article class="tip">
+            <p class="tip-index">06</p>
             <h3>Gönüllülük ve yan deneyimler değer üretir</h3>
             <p>
               Özellikle geçiş dönemlerinde yan projeler, gönüllülük ve topluluk deneyimleri
               yetkinliklerini somutlaştırır; hikâyeni güçlendirir.
             </p>
+            <p class="tip-note">Pratik: boşlukları “kanıt üretilecek alan” olarak kullan.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section faq" id="sss" aria-labelledby="faq-title">
-      <div class="container narrow">
+      <div class="container faq-layout">
         <div class="section-head">
           <p class="eyebrow">Sık sorulanlar</p>
           <h2 id="faq-title">Merak edilenler</h2>
+          <p class="section-lead">Süreç, kapsam ve ilk adım hakkında en çok sorulanlar.</p>
         </div>
         <div class="faq-list">
           <details open>
@@ -337,6 +561,7 @@
             <p>
               Çoğu danışan CV &amp; LinkedIn veya kariyer planlama ile başlar.
               İlk görüşmede hedefini dinleyip en hızlı etki yaratacak adımı birlikte seçeriz.
+              Bazen önce konumlanma, bazen doğrudan mülakat çalışması gerekir.
             </p>
           </details>
           <details>
@@ -360,6 +585,20 @@
               Görüşme sonunda net bir sonraki adım ve uygun hizmet önerisi çıkarıyoruz.
             </p>
           </details>
+          <details>
+            <summary>Ne kadar sürede sonuç görürüm?</summary>
+            <p>
+              Bu, hedefin ve mevcut profilinin durumuna göre değişir. CV/LinkedIn düzeni genellikle hızlı etki yaratır;
+              networking ve yurt dışı süreçler daha uzun soluklu ilerler. İlk görüşmede gerçekçi bir zaman çerçevesi konuşuruz.
+            </p>
+          </details>
+          <details>
+            <summary>Hazır paket mi, kişiselleştirilmiş mi?</summary>
+            <p>
+              Kişiselleştirilmiş. Hizmet isimleri standarttır ama içerik senin sektörüne, hedefine ve
+              mevcut profiline göre yeniden kurulur. Şablon CV veya genel tavsiye çalışması yapmıyoruz.
+            </p>
+          </details>
         </div>
       </div>
     </section>
@@ -369,7 +608,18 @@
         <div class="cta-copy">
           <p class="eyebrow light">Randevu</p>
           <h2 id="cta-title">Kariyerini bilinçli inşa etmeye hazır mısın?</h2>
-          <p>Hedefini kısaca anlat. Birlikte net bir sonraki adım çıkaralım.</p>
+          <p>
+            Hedefini kısaca anlat. Formu gönderdiğinde mailin açılır; birlikte net bir sonraki adım çıkarırız.
+          </p>
+          <ul class="cta-points">
+            <li>İlk dönüşte ihtiyacını netleştiririz</li>
+            <li>Uygun hizmet yolunu birlikte seçeriz</li>
+            <li>Online, esnek ve kişiye özel ilerleriz</li>
+          </ul>
+          <div class="cta-contact">
+            <p><span>E-posta</span> merhaba@ceylantarhan.com</p>
+            <p><span>Konum</span> Malta · Online danışmanlık</p>
+          </div>
           <p class="cta-tag">Deneyime Dayalı Kariyer Danışmanlığı</p>
         </div>
         <form class="cta-form" id="randevu-form" novalidate>
@@ -383,7 +633,7 @@
           </label>
           <label>
             <span>İlgilendiğin hizmet</span>
-            <select name="service" required>
+            <select name="service" id="service-select" required>
               <option value="" disabled selected>Seçiniz</option>
               <option>Kariyer Planlama</option>
               <option>CV &amp; LinkedIn Stratejileri</option>
@@ -399,7 +649,7 @@
             <span>Hedefin</span>
             <textarea name="goal" rows="4" required placeholder="Örn. yurt dışında iş arıyorum, LinkedIn’imi güçlendirmek istiyorum…"></textarea>
           </label>
-          <button class="btn btn-primary" type="submit">Mesajı gönder</button>
+          <button class="btn btn-primary magnetic" type="submit"><span>Mesajı gönder</span></button>
           <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -408,9 +658,18 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="brand" href="#ust"><span class="brand-mark">Ceylan Tarhan</span></a>
-      <p>© <span id="year"></span> · Deneyime Dayalı Kariyer Danışmanlığı</p>
-      <a class="ig-link" href="https://www.instagram.com/p/DbLWYhsCvRY/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="footer-brand">
+        <a class="brand" href="#ust"><span class="brand-mark">Ceylan Tarhan</span></a>
+        <p>Deneyime Dayalı Kariyer Danışmanlığı</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#surec">Süreç</a>
+        <a href="#sss">SSS</a>
+        <a href="#iletisim">Randevu</a>
+        <a class="ig-link" href="https://www.instagram.com/p/DbLWYhsCvRY/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Ceylan Tarhan</p>
     </div>
   </footer>
 
